@@ -1,6 +1,6 @@
 <div class = "list-item group">
 
-	<div class = "list-item-checker group"><%= link_to "Yes", todo_list_todo_item_path(todo_list, todo_item), method: :delete %></div>
+	<%= link_to "Yes", todo_list_todo_item_path(todo_list, todo_item), method: :delete, class: "list-item-checker group" %>
 	<div class = "list-item-content group">
 		<p class = "list-item-content-words"><%= todo_item.content %></p>
 	</div>
