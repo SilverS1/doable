@@ -1,0 +1,42 @@
+/*******************
+	HERO
+*******************/
+
+.hero {
+/*	background-color: #34C4DB;*/
+	background-color: lightblue;
+	height: 250px;
+	padding: 30px;
+}
+
+.hero-inner {
+	background-color: white;
+	height: 100%;
+	border-radius: 5px;
+	padding: 75px 0;
+}
+
+.hero-inner_signed_in {
+	background-color: white;
+	height: 100%;
+	border-radius: 5px;
+	padding: 60px 0;
+}
+
+.hero-title {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 33px;
+	letter-spacing: 2px;
+}
+
+.hero-title-strong {
+	text-align: center;
+	font-size: 22px;
+/*	font-weight: bold;*/
+	line-height: 33px;
+	letter-spacing: 2px;
+	color: #34C4DB;
+	font-style: italic;
+}

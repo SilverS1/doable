@@ -1,0 +1,41 @@
+<div class = "hero">
+
+
+				<% if user_signed_in? %>
+		
+				<div class = "hero-inner_signed_in">
+			
+				<h1 class = "hero-title">You have <%= current_user.todo_lists.count %> 
+					<%= link_to "Lists", '#', class: "hero-title-strong" %>,</h1>
+				<h1 class = "hero-title">and <%= current_user.todo_items.count %> <strong class = "hero-title-strong">
+					<% if current_user.todo_items.count == 1 %>
+					<%= link_to "Thing", '#', class: "hero-title-strong" %>
+					<% else %>
+					<%= link_to "Things", '#', class: "hero-title-strong" %>
+					<% end %>
+					 to do</strong>.</h1>
+			<% else %>
+			<div class = "hero-inner">
+				<h1 class = "hero-title">Make your lists <strong class = "hero-title-strong">Doable</strong>.</h1>
+			<% end %>
+
+
+		</div>
+
+	</div>
+
+	<div class = "main-content group">
+
+		<% if user_signed_in? %>
+
+			<% current_user.todo_lists.each do |todo_list| %>
+
+				<%= render 'todo_lists/todo_list', todo_list: todo_list %>
+
+			<% end %>
+
+		<% end %>
+
+	
+
+	</div>

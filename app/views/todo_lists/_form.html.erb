@@ -1,0 +1,12 @@
+<%= form_for @todo_list do |f| %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :list_type, "Type" %>
+	<%= f.text_field :list_type %>
+
+	<%= f.submit %>
+
+
+<% end %>
