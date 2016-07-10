@@ -1,12 +1,20 @@
 <%= form_for @todo_list do |f| %>
 
-	<%= f.label :title %>
-	<%= f.text_field :title %>
+	<div class = "form-fields">
 
-	<%= f.label :list_type, "Type" %>
-	<%= f.text_field :list_type %>
+		<%= f.label :title, "Title *", class: "form-label" %>
+		<%= f.text_field :title, class: "form-field" %>
 
-	<%= f.submit %>
+		<br>
+
+		<%= f.label :list_type, "Type", class: "form-label" %>
+		<%= f.text_field :list_type, class: "form-field" %>
+
+		<br>
+
+		<%= f.submit "Create List" %>
+
+	</div>
 
 
 <% end %>

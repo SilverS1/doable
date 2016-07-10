@@ -8,6 +8,7 @@ class TodoItemsController < ApplicationController
 
 	def create
 		@todo_item = @todo_list.todo_items.new(todo_item_params)
+		@todo_item.user_id = current_user.id
 		if @todo_item.save
 			redirect_to root_url
 		else
