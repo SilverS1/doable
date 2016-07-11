@@ -22,6 +22,25 @@ class TodoItemsController < ApplicationController
 		redirect_to root_url
 	end
 
+	def edit
+		@todo_item = TodoItem.find(params[:id])
+	end
+
+	def update
+		@todo_item = TodoItem.find(params[:id])
+		if @todo_item.update_attributes(todo_item_params)
+			redirect_to :back
+		else
+			render 'edit'
+		end
+	end
+
+	def check_item
+	  	@todo_item = TodoItem.find(params[:id])
+	  	@todo_item.update_attributes(checked: true)
+	  	redirect_to root_url
+	end
+
 	private
 
 	def set_todo_list
@@ -29,7 +48,7 @@ class TodoItemsController < ApplicationController
 	end
 
 	def todo_item_params
-		params.require(:todo_item).permit(:content, :importance, :due_date)
+		params.require(:todo_item).permit(:content, :importance, :due_date, :checked)
 	end
 
 
