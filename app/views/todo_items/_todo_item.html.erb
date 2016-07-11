@@ -1,8 +1,8 @@
 <div class = "list-item group">
 
-	<%= form_tag check_item_todo_list_todo_item_path(todo_list, todo_item), method: :put do %>
+	<%= form_tag check_item_todo_list_todo_item_path(todo_list, todo_item), method: :put, class: "list-item-checker group" do %>
 
-		<%= submit_tag "YES", class: "list-item-checker group" %>
+		<%= submit_tag "Y" %>
 
 	<% end %>
 
@@ -11,5 +11,5 @@
 		<p class = "list-item-content-words"><%= todo_item.content %></p>
 
 	</div>
-	
+
 </div>

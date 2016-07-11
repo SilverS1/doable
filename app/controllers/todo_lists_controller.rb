@@ -16,6 +16,11 @@ class TodoListsController < ApplicationController
 		end
 	end
 
+	def show
+		@todo_list = TodoList.find(params[:id])
+		@todo_item = TodoItem.new
+	end
+
 	def edit
 		@user = current_user
 		@todo_list = TodoList.find(params[:id])

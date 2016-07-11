@@ -1,0 +1,27 @@
+<div class = "show-list group">
+
+	<%= link_to "E", edit_todo_list_path(@todo_list), class: "list-delete", todo_list: @todo_list %>
+	<%= link_to "X", todo_list_path(@todo_list), method: :delete, class: "list-delete" %>
+
+	<br>
+
+	<div class = "list-header group">
+		<p class = "list-title"><%= @todo_list.title %></p>
+		<p class = "list-type"><%= @todo_list.list_type %></p>
+	</div>
+
+	<%= form_for [@todo_list, @todo_item] do |f| %>
+		
+		<%= f.text_field :content, class: "show-new_item_box" %>
+		<%= f.submit "+", class: "new_item_box_submit" %>
+
+	<% end %>
+	<br>
+
+	<% @todo_list.todo_items.where('checked = 0').each do |todo_item| %>
+
+		<%= render 'todo_items/todo_item', todo_item: todo_item, todo_list: @todo_list %>
+
+	<% end %>
+
+</div>
