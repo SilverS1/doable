@@ -1,3 +1,7 @@
+/*******************
+	FORMS
+*******************/
+
 .form-wrapper {
 	background-color: lightblue;
 	margin: 30px;
@@ -31,3 +35,27 @@
 .form-submit {
 
 }
+
+/*******************
+	LIST ITEMS
+*******************/
+
+.new_item_box {
+	width: 91%;
+	height: 30px;
+	font-size: 12px;
+}
+
+.new_item_box_submit {
+	font-size: 14px;
+	color: black;
+	background-color: lightgray;
+	width: 35px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.new_item_box_submit:hover {
+	cursor: pointer;
+}
+

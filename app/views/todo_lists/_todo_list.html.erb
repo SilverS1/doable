@@ -11,9 +11,9 @@
 	</div>
 
 	<%= form_for [todo_list, @todo_item] do |f| %>
-
-		<%= f.label :content %>
-		<%= f.text_field :content %>
+		
+		<%= f.text_field :content, class: "new_item_box" %>
+		<%= f.submit "+", class: "new_item_box_submit" %>
 
 	<% end %>
 	<br>
