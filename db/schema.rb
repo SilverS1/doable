@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160711092515) do
+ActiveRecord::Schema.define(version: 20160711102856) do
 
   create_table "todo_items", force: :cascade do |t|
     t.string   "content",      limit: 255
@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 20160711092515) do
   add_index "todo_items", ["user_id"], name: "index_todo_items_on_user_id", using: :btree
 
   create_table "todo_lists", force: :cascade do |t|
-    t.string  "list_type", limit: 255
-    t.string  "title",     limit: 255
-    t.integer "user_id",   limit: 4
+    t.string  "list_type",   limit: 255
+    t.string  "title",       limit: 255
+    t.integer "user_id",     limit: 4
+    t.boolean "remove_self",             default: false
   end
 
   add_index "todo_lists", ["user_id"], name: "index_todo_lists_on_user_id", using: :btree

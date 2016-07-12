@@ -12,6 +12,15 @@
 
 		<br>
 
+		<%= f.label :remove_self, "Remove after all items are complete?", class: "form-label" %>
+		<%= f.check_box :remove_self, class: "form-field" %>
+
+		<%= fields_for :todo_item do |todo_item_form| %>
+
+			<%= todo_item_form.text_field :content %>
+
+		<% end %>
+
 		<%= f.submit "Create List" %>
 
 	</div>
