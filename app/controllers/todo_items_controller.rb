@@ -3,17 +3,14 @@ class TodoItemsController < ApplicationController
 	before_action :set_todo_list
 
 	def new
-		@todo_item = @todo_list.todo_items.new
+		@todo_item = TodoItem.new
 	end
 
 	def create
 		@todo_item = @todo_list.todo_items.new(todo_item_params)
-		@todo_item.user_id = current_user.id
-		if @todo_item.save
-			redirect_to root_url
-		else
-			render 'new'
-		end
+		@todo_item.save
+		#@todo_item.user_id = current_user.id
+		redirect_to root_url
 	end
 
 	def destroy

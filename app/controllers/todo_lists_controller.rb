@@ -4,14 +4,14 @@ class TodoListsController < ApplicationController
 	def new
 		@user = current_user
 		@todo_list = @user.todo_lists.new
-		@todo_list.todo_items.new(params[:todo_item])
-		@todo_list.user_id = current_user.id
+		#@todo_list.todo_items.new(params[:todo_item])
+		#@todo_list.user_id = current_user.id
 	end
 
 	def create
 		@user = current_user
 		@todo_list = @user.todo_lists.new(todo_list_params)
-		@todo_list.user_id = current_user.id
+		# @todo_list.user_id = current_user.id
 		if @todo_list.save
 			redirect_to root_url
 		else
