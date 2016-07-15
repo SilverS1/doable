@@ -9,8 +9,6 @@ module TodoListsHelper
 			"green_background"
 		elsif list.color == "Yellow"
 			"yellow_background"
-		elsif list.color == "Default"
-			"default_background"
 		else
 			"list"
 		end

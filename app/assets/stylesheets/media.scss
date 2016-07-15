@@ -28,40 +28,30 @@
 	.blue_background {
 		width: 46.5%;
 		margin: 10px;
-		background-color: blue;
+		background-color: lightblue;
 		float: left;
 	}
 
 	.red_background {
 		width: 46.5%;
 		margin: 10px;
-		background-color: red;
+		background-color: #E04F4F;
 		float: left;
 	}
 
 	.green_background {
 		width: 46.5%;
 		margin: 10px;
-		background-color: green;
+		background-color: #83CC6A;
 		float: left;
 	}
 
 	.yellow_background {
 		width: 46.5%;
 		margin: 10px;
-		background-color: yellow;
+		background-color: #FAFF91;
 		float: left;
 	}
-
-	.default_background {
-		width: 46.5%;
-		margin: 10px;
-		background-color: lightblue;
-		float: left;
-	}
-
-
-
 
 }
 
@@ -91,7 +81,7 @@
 		display: inline-block;
 		float: none;
 		vertical-align: top;
-		background-color: blue;
+		background-color: lightblue;
 	}
 
 	.red_background {
@@ -99,7 +89,7 @@
 		display: inline-block;
 		float: none;
 		vertical-align: top;
-		background-color: red;
+		background-color: #E04F4F;
 	}
 
 	.green_background {
@@ -107,7 +97,7 @@
 		display: inline-block;
 		float: none;
 		vertical-align: top;
-		background-color: green;
+		background-color: #83CC6A;
 	}
 
 	.yellow_background {
@@ -115,17 +105,8 @@
 		display: inline-block;
 		float: none;
 		vertical-align: top;
-		background-color: yellow;
+		background-color: #FAFF91;
 	}
-
-	.default_background {
-		width: 31%;
-		display: inline-block;
-		float: none;
-		vertical-align: top;
-		background-color: default;
-	}
-
 
 
 }

@@ -6,7 +6,7 @@ class TodoList < ActiveRecord::Base
   self.table_name = "todo_lists"
   accepts_nested_attributes_for :todo_items, reject_if: :all_blank
 
-  COLORS = ["Red", "Blue", "Green", "Yellow", "Default"]
+  COLORS = ["Red", "Blue", "Green", "Yellow"]
 
 
 end
