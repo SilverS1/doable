@@ -4,14 +4,11 @@ class TodoListsController < ApplicationController
 	def new
 		@user = current_user
 		@todo_list = @user.todo_lists.new
-		#@todo_list.todo_items.new(params[:todo_item])
-		#@todo_list.user_id = current_user.id
 	end
 
 	def create
 		@user = current_user
 		@todo_list = @user.todo_lists.new(todo_list_params)
-		# @todo_list.user_id = current_user.id
 		if @todo_list.save
 			redirect_to root_url
 		else
@@ -51,11 +48,7 @@ class TodoListsController < ApplicationController
 		params.require(:todo_list).permit(:list_type, :title, :remove_self, 
 			todo_items_attributes: [:content, :importance, :due_date, :checked])
 	end
-
-	# def todo_item_params
-	# 	params.require(:todo_item).permit(:content, :importance, :due_date, :checked)
-	# end
-
+	
 	def set_user
 		@user = current_user
 	end

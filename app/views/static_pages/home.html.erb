@@ -38,9 +38,17 @@
 
 <% if user_signed_in? %>
 
+	<%= link_to "Add List", "#", class: "root-add-list" %>
+
+		<div class = "hero">
+
+				<%= render 'todo_lists/homepage_form' %>
+
+		</div>
+
 	<div class = "main-content group">
 
-		<% current_user.todo_lists.each do |todo_list| %>
+		<% @user.todo_lists.each do |todo_list| %>
 
 			<%= render 'todo_lists/todo_list', todo_list: todo_list %>
 
