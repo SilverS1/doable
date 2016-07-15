@@ -20,7 +20,6 @@
 
 					<% if user_signed_in? %>
 
-						<%= link_to "New List", new_todo_list_path, class: "header-nav-li" %>
 						<%= link_to "Lists", new_user_registration_path, class: "header-nav-li" %>
 						<%= link_to "Logout", destroy_user_session_path, method: :delete, class: "header-nav-li" %>
 

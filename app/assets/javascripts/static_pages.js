@@ -5,9 +5,3 @@ $(document).ready(function() {
 	});		
 			
 });
-
-// $(document).ready(function() {
-
-//  $('.root-list-form').hide(); //Initially form wil be hidden.
-
-//  });

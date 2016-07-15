@@ -45,7 +45,7 @@ class TodoListsController < ApplicationController
 	private
 
 	def todo_list_params
-		params.require(:todo_list).permit(:list_type, :title, :remove_self, 
+		params.require(:todo_list).permit(:list_type, :title, :remove_self, :color,
 			todo_items_attributes: [:content, :importance, :due_date, :checked])
 	end
 	

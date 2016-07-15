@@ -15,6 +15,11 @@
 		<%= f.label :remove_self, "Remove after all items are complete?", class: "form-label" %>
 		<%= f.check_box :remove_self, class: "form-field" %>
 
+		<br>
+
+		<%= f.label :color, "Color", class: "form-label" %>
+		<%= f.select :color, options_for_select(TodoList::COLORS), class: "form-field" %>
+
 		<%= f.submit "Create List" %>
 
 	</div>
