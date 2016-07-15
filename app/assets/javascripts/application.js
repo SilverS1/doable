@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+//= require static_pages.js
 //= require_tree .
+
+
