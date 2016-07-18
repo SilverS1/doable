@@ -15,6 +15,7 @@
 //= require turbolinks
 
 //= require static_pages.js
+//= require todo_items.js
 //= require_tree .
 
 

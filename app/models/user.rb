@@ -5,4 +5,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :todo_lists
   has_many :todo_items
+  after_commit :set_default_role, on: :create 
+
+  private
+
+  def set_default_role
+  	self.role ||= "User"
+  end
+
+
 end
